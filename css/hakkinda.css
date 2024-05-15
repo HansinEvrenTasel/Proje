@@ -1,0 +1,40 @@
+
+.container .navbar{
+    background: rgba(8, 60, 216, 0.4)
+}
+
+.navbar ul li a:hover {
+    background: #4688d4;
+    border-radius: 2px;
+}
+
+.navbar .logo a{
+    color: #c4d8da;
+
+}
+
+.container .center{
+    position:absolute;
+    top: 100px;
+    left: 20px;
+    
+    font-family: sans-serif;
+    user-select: none;
+}
+
+
+.center ul li p{
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: bold;
+    width: auto;
+    text-align:justify;
+}
+
+.center ul li h1{
+    color: rgb(160, 0, 168);
+    font-size: 20px;
+    font-weight: bolder;
+    width: auto;
+    text-align:justify;
+}
