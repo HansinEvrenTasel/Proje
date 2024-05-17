@@ -103,6 +103,18 @@
     font-family: monospace;
 }
 
+.center .baslik3 h1{
+    color: rgb(159, 113, 25);
+    font-size: 20px;
+    font-weight: bold;
+    width: auto;
+    text-align:left;
+    line-height: 2;
+    font-family: monospace;
+}
+
+
+
 table {
     width: 100%;
     border-collapse: collapse;
