@@ -1,3 +1,7 @@
+html, body{
+    overflow: hidden;
+}
+
 .container .navbar{
     background: rgba(31, 209, 8, 0.4)
 }

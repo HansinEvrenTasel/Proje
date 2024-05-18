@@ -4,73 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crimson King's Site</title>
-    <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/css/sehrim.css">
+    <link rel="stylesheet" href="/css/common.css">
 </head>
 <body>
-    <header>
+    
+    <div class="container">
         <div class="navbar">
             <div class="logo">
                 <a href="/index.html">CRIMSON KING'S SITE</a>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="/index.html" id="anamenu-link" class="active">ANA MENÜ</a></li>
-                    <li><a href="/public/hakkinda.html" id="hakkinda-link">HAKKINDA</a></li>
-                    <li><a href="/public/ozgecmis.html" id="ozgecmis-link">ÖZGEÇMİŞ</a></li>
-                    <li><a href="/public/sehrim.html" id="sehrim-link">ŞEHRİM</a></li>
-                    <li><a href="/index.html" id="mirasimiz-link">MİRASIMIZ</a></li>
-                    <li><a href="/index.html" id="iletisim-link">İLETİŞİM</a></li>
-                    <li><a href="/index.html" id="girisyap-link">Giriş Yap</a></li>
-                    <li><a href="/index.html" id="kayitol-link">Kayıt Ol</a></li>
-                </ul>
-            </nav>
+            <ul>
+                <li><a href="/index.html" id="anamenu-link" class="active">ANA MENÜ</a></li>
+                <li><a href="/public/hakkinda.html" id="hakkinda-link">HAKKINDA</a></li>
+                <li><a href="/public/ozgecmis.html" id="ozgecmis-link">ÖZGEÇMİŞ</a></li>
+                <li><a href="/public/sehrim.html" id="sehrim-link" >ŞEHRİM</a></li>
+                <li><a href="/public/mirasimiz.html" id="mirasimiz-link" >MİRASIMIZ</a></li>
+                <li><a href="/public/iletisim.html" id="iletisim-link">İLETİŞİM</a></li>
+                <li><a href="/index.html" id="girisyap-link">Giriş Yap</a></li>
+                <li><a href="/index.html" id="kayitol-link">Kayıt Ol</a></li>
+            </ul>
         </div>
-    </header>
 
-    <main>
-        <section class="intro">
-            <img src="universe.jpg" alt="Evren Görseli">
-        </section>
-
-        <section class="about">
-            <h1>Hakkımda</h1>
-            <p>Benim ismim Hansın Evren Taşel, Eskişehirliyim ve Sakarya Üniversitesinde bilgisayar mühendisliği okuyorum. 
-                Hayattaki en büyük isteğim adımın geçeceği ve insanlara dokunabileceğim çeşitli eserler bırakmak. Bu isteğimi kendim bilgisayar oyunu, kitap veya müzik formatında gerçekleştirmek istiyorum.
-            </p>
-        </section>
-
-        <article>
-            <h1>Ben Nelerden Hoşlanırım?</h1>
-            <p>Müzik dinlemek ve söylemek genel olarak en çok yaptığım ve sevdiğim aktivitedir. Pek güzel olduğunu rahatça söyleyebileceğim bir müzik zevkim var. 
-                Genel olarak her müziği eğer anlamlı ve ses olarak ilgi çekici ise severim. En sevdiğim müzik türü progresif rocktır. 
-                Sevdiğim gruplardan King Crimson ve sevdiğim müzisyenlerden David Bowie'ye örnek verebilirim.
-            </p>
-        </article>
-
-        <aside>
-            <div class="group-container">
-                <div class="group-item">
-                    <img src="kingcrimson.png" alt="King Crimson Albüm Kapağı" class="group-image">
-                    <div class="group-description">King Crimson'nın Albüm Kapağı</div>
+        <div class="container"><img src="Images/eskisehirarkaplan.png" alt=""></div>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <a href="#section1"><img src="Images/eskisehir1.png" alt="Image 1">
+                        <div class="overlay">
+                            <div class="text">Sazova Parkı</div>
+                        </div>
+                    </a>
                 </div>
-                <div class="group-item">
-                    <img src="ziggystardust.png" alt="David Bowie Albüm Kapağı" class="group-image">
-                    <div class="group-description">David Bowie'nin Albüm Kapağı</div>
+                <div class="slide">
+                    <a href="#section2"><img src="Images/eskisehir2.png" alt="Image 2">
+                        <div class="overlay">
+                            <div class="text">Odunpazarı Evleri</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="slide">
+                    <a href="#section3"><img src="Images/eskisehir3.png" alt="Image 3">
+                        <div class="overlay">
+                            <div class="text">Adalar</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="slide">
+                    <a href="#section4"><img src="Images/eskisehir4.png" alt="Image 4">
+                        <div class="overlay">
+                            <div class="text">Yazılıkaya</div>
+                        </div>
+                    </a>
                 </div>
             </div>
-        </aside>
-
-        <div class="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-    </main>
+    </div>   
+    <div class="navigation">
+        <button onclick="showSlide(0)">1</button>
+        <button onclick="showSlide(1)">2</button>
+        <button onclick="showSlide(2)">3</button>
+        <button onclick="showSlide(3)">4</button>
+    </div>
 
-    <footer>
-        <p>&copy; 2024 Crimson King's Site. Tüm hakları saklıdır.</p>
-    </footer>
+    <div id="section1">
+        <h2>Başlık 1</h2>
+        <p>Bu bölümün içeriği 1.</p>
+    </div>
+    <div id="section2">
+        <h2>Başlık 2</h2>
+        <p>Bu bölümün içeriği 2.</p>
+    </div>
+    <div id="section3">
+        <h2>Başlık 3</h2>
+        <p>Bu bölümün içeriği 3.</p>
+    </div>
+    <div id="section4">
+        <h2>Başlık 4</h2>
+        <p>Bu bölümün içeriği 4.</p>
+    </div>
 
-    <script src="bootstrap.js"></script>
-    <script src="script.js"></script>
+    <script>
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelector('.slides');
+            const totalSlides = document.querySelectorAll('.slide').length;
+            
+            if (index >= 0 && index < totalSlides) {
+                currentSlide = index;
+                const offset = -currentSlide * 100;
+                slides.style.transform = `translateX(${offset}%)`;
+            }
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    }); 
+    </script>
+    <script src="bootstrap.js"> </script>
+    <script src="script.js"> </script>
 </body>
 </html>
