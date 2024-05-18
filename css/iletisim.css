@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#app {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    margin-top: 100px; /* Navbar yüksekliği kadar boşluk bırakır */
+    
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button[type="button"] {
+    background-color: #f39c12;
+    color: white;
+    margin-right: 10px;
+}
+
+button[type="submit"] {
+    background-color: #2ecc71;
+    color: white;
+}
+
+button[type="button"]:hover,
+button[type="submit"]:hover {
+    opacity: 0.9;
+}
+
+.errors {
+    background: #e74c3c;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.errors ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+html, body{
+    overflow: hidden;
+}
+
+.container .navbar{
+    background: rgba(8, 105, 209, 0.4)
+}
+
+.container .center{
+    position:absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: sans-serif;
+    user-select: none;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Diğer içeriklerden üstte olmasını sağlar */
+    background: rgba(31, 209, 8, 0.4);
+
+}
+
+.navbar ul li a:hover {
+    background-color: rgba(9, 47, 236, 0.2); /* Üzerine gelindiğinde arka plan rengi */
+    border-radius: 4px; /* Kenar yumuşatma */
+}
+

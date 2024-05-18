@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim Formu</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/iletisim.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="/index.html">CRIMSON KING'S SITE</a>
+            </div>
+            <ul>
+                <li><a href="/index.html" id="anamenu-link" class="active">ANA MENÜ</a></li>
+                <li><a href="/public/hakkinda.html" id="hakkinda-link">HAKKINDA</a></li>
+                <li><a href="/public/ozgecmis.html" id="ozgecmis-link">ÖZGEÇMİŞ</a></li>
+                <li><a href="/public/sehrim.html" id="sehrim-link" >ŞEHRİM</a></li>
+                <li><a href="/public/mirasimiz.html" id="mirasimiz-link" >MİRASIMIZ</a></li>
+                <li><a href="/public/iletisim.html" id="iletisim-link">İLETİŞİM</a></li>
+                <li><a href="/index.html" id="girisyap-link">Giriş Yap</a></li>
+                <li><a href="/index.html" id="kayitol-link">Kayıt Ol</a></li>
+            </ul>
+        </div>
+        
+        <div id="app">
+            <h1>İletişim Formu</h1>
+            <form @submit.prevent="submitForm">
+                <div>
+                    <label for="name">Ad:</label>
+                    <input type="text" id="name" v-model="form.name">
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" v-model="form.email">
+                </div>
+                <div>
+                    <label for="message">Mesaj:</label>
+                    <textarea id="message" v-model="form.message"></textarea>
+                </div>
+                <div>
+                    <button type="button" @click="validateForm">Kontrol</button>
+                    <button type="submit">Gönder</button>
+                </div>
+                <div v-if="errors.length">
+                    <p>Lütfen aşağıdaki hataları düzeltin:</p>
+                    <ul>
+                        <li v-for="error in errors" :key="error">{{ error }}</li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                form: {
+                    name: '',
+                    email: '',
+                    message: ''
+                },
+                errors: []
+            },
+            methods: {
+                validateForm() {
+                    this.errors = [];
+
+                    if (!this.form.name) {
+                        this.errors.push("Ad alanı boş bırakılamaz.");
+                    }
+                    if (!this.form.email) {
+                        this.errors.push("Email alanı boş bırakılamaz.");
+                    } else if (!this.validEmail(this.form.email)) {
+                        this.errors.push("Geçersiz bir email formatı.");
+                    }
+                    if (!this.form.message) {
+                        this.errors.push("Mesaj alanı boş bırakılamaz.");
+                    }
+
+                    if (!this.errors.length) {
+                        alert("Tüm bilgiler doğru!");
+                    }
+                },
+                submitForm() {
+                    this.validateForm();
+                    if (!this.errors.length) {
+                        alert("Form başarıyla gönderildi!");
+                        // Formu göndermek için gerekli işlemler yapılır.
+                    }
+                },
+                validEmail(email) {
+                    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@(([^<>()[\]\.,;:\s@"]+\.)+[^<>()[\]\.,;:\s@"]{2,})$/i;
+                    return re.test(email);
+                }
+            }
+        });
+    </script>
+    <script src="bootstrap.js"> </script>
+    <script src="script.js"> </script>
+</body>
+</html>

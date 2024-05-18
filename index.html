@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crimson King's Site</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/common.css">
+    
+</head>
+<body>
+     <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="/index.html">CRIMSON KING'S SITE</a>
+            </div>
+            <ul>
+                <li><a href="/index.html" id="anamenu-link" class="active">ANA MENÜ</a></li>
+                <li><a href="/public/hakkinda.html" id="hakkinda-link">HAKKINDA</a></li>
+                <li><a href="/public/ozgecmis.html" id="ozgecmis-link">ÖZGEÇMİŞ</a></li>
+                <li><a href="/public/sehrim.html" id="sehrim-link" >ŞEHRİM</a></li>
+                <li><a href="/public/mirasimiz.html" id="mirasimiz-link" >MİRASIMIZ</a></li>
+                <li><a href="/public/iletisim.html" id="iletisim-link">İLETİŞİM</a></li>
+                <li><a href="/index.html" id="girisyap-link">Giriş Yap</a></li>
+                <li><a href="/index.html" id="kayitol-link">Kayıt Ol</a></li>
+            </ul>
+        </div>
+
+        <div class="container"><img src="amanzara.jpg" alt=""></div>
+       
+
+        <div class="center">
+            <h1>Welcome To</h1>
+            <h2>IN THE WAKE OF POSEIDON</h2>
+            <div class="buttons">
+                <button id="lyrics-link">Lyrics</button>
+                <button id="listen-link">Listen</button>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <div id="app">
+        {{ message }}
+      </div>
+      
+      <script>
+        new Vue({
+          el: '#app',
+          data: {
+            message: 'An Easter Egg'
+          }
+        })
+      </script>
+    </div>
+    <script src="bootstrap.js"> </script>
+    <script src="script.js"> </script>
+</body>
+</html>

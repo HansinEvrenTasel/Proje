@@ -1,0 +1,70 @@
+html, body{
+    overflow: hidden;
+}
+
+.container .navbar{
+    background: rgba(31, 209, 8, 0.4)
+}
+
+.container .center{
+    position:absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: sans-serif;
+    user-select: none;
+}
+
+.center h1{
+    color: black;
+    font-size: 70px;
+    font-weight: bold;
+    width: 900px;
+    text-align: center;
+}
+
+.center h2{
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    width: 885px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.center .button{
+    margin: 0 auto;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.buttons button{
+    height: 50px;
+    width: 150px;
+    font-size: 18px;
+    font-weight: bold;
+    color:aquamarine;
+    background: rgb(31, 209, 8);
+    border: solid 1px blue;
+    cursor: pointer;
+    outline: none;
+    border-radius: 25px;
+    transition: .5s;
+
+}
+
+.buttons button:hover{
+    background: #fff ;
+}
+
+.navbar ul li a:hover {
+    background: #ff6e00;
+    border-radius: 2px;
+}
+
+.navbar .logo a{
+    color: #012a07;
+
+}
