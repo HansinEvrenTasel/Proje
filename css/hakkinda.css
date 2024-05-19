@@ -68,20 +68,20 @@
     font-family: monospace;
 }
 
-.group-container {
+.left .group-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     margin-top: 20px;
 }
 
-.group-item {
+.left .group-container .group-item {
     position: relative;
     
     width: 200px;
 }
 
-.group-image {
+.group-item .group-image {
     width: 100%;
     height: auto;
     border: 2px solid #005c64;
@@ -89,14 +89,14 @@
     transition: opacity 0.3s ease;
 }
 
-.group-description {
+.group-item .group-description {
     color: #fff;
     font-size: 16px;
     margin-top: 10px;
     text-align: center;
 }
 
-.overlay {
+.group-item .overlay {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -116,7 +116,7 @@
     font-size: 18px;
 }
 
-.music-link {
+.group-item .music-link {
     position: relative;
     display: block;
 }
