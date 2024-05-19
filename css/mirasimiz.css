@@ -1,3 +1,6 @@
+html, body{
+    overflow: hidden;
+}
 
 .container .navbar{
     background: rgba(159, 106, 0, 0.4)
@@ -20,7 +23,7 @@
 
 .container .center{
     display: flex;
-    position: relative;
+    flex-direction: row;
     position:absolute;
     top: 100px;
     left: 20px;
@@ -31,58 +34,47 @@
     user-select: none;
 }
 
-.center .left {
-    flex-grow: 1; /* Diğer içerikler kadar büyümeye izin verir */
-    flex-shrink: 0; /* Küçülmesine izin verme */
-    flex-basis: auto; /* Temel boyutu otomatik ayarla */
-    display: flex;
-    flex-direction: column; /* Dikeyde sıralama */
-    gap: 20px;
-    width: 50%;
-    padding-top: 30px;
+.center .left, .center .right {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+    width: 48%;
+    padding: 20px;
     background-color: rgba(138, 62, 0, 0.9);
+    margin: 10px;
+    border-radius: 10px;
 }
 
-.center .right {
-    flex-grow: 2; /* Diğer içeriklerden iki kat daha büyür */
-    flex-shrink: 0; /* Küçülmesine izin verme */
-    flex-basis: auto; /* Temel boyutu otomatik ayarla */
-    width: 50%;
-    padding-left: 20px;
-    padding-right: 20px;
-    display: flex;
-    flex-direction: column; /* Dikeyde sıralama */
-    justify-content: center;
-    background-color: rgba(138, 62, 0, 0.9);
+.center .right p, .center .right h1 {
+    color: rgb(207, 206, 206);
+}
+
+.center .right h1 {
+    font-size: 35px;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 1.7;
+    font-family: cursive;
 }
 
 
 .center .right p{
-    color: rgb(207, 206, 206);
+    
     font-size: 20px;
     width: auto;
     font-weight: bold;
     
     line-height: 1.5; 
-    font-family:sans-serif;
+    
     
 }
 
-.center h1{
-    color: rgb(0, 164, 25);
-    font-size: 35px;
-    font-weight: bolder;
-    width: auto;
-    text-align:center;
-    line-height: 1.7;
-    font-family:cursive;
-}
 
 .group-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between; /* Resimleri yatayda yay */
+    gap: 10px;
+    justify-content: center; /* Resimleri yatayda yay */
     margin-top: 20px;
 }
 
@@ -90,7 +82,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 200px;
+    width: calc(50% - 10px);
+    margin-bottom: 10px;
 }
 
 .group-image {
@@ -109,7 +102,14 @@
 
 .navbar ul li a{
     -webkit-text-stroke: 0.2px rgb(0, 0, 0);
+    color: antiquewhite;
+    text-decoration: none;
+    font-size: 19px;
+    padding: 6px 13px;
+    font-family: 'Roboto', sans-serif;
+    transition: .5s;
 }
+
 
 .left .image-container {
     display: flex;
@@ -128,3 +128,4 @@
     align-items: center;
     width: calc(40% - 10px); /* Yan yana iki resim olacak şekilde genişliği ayarla */
 }
+

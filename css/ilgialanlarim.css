@@ -10,3 +10,81 @@ body {
 .track-audio {
     margin-top: 5px;
 }
+
+/* Filmleri sarmalayacak container */
+#movies {
+    position: relative;
+    max-width: 1200px; /* Max genişlik belirle, istediğiniz değere göre ayarlayabilirsiniz */
+    margin: 0 auto; /* Sayfayı merkezlemek için */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Otomatik sütun sayısı ve minimum genişlik belirle */
+    gap: 20px; /* Sütunlar arası boşluk */
+    padding-top: 20px; /* Add some padding to the top to create space */
+}
+
+.movie {
+    border: 1px solid #ddd; /* Film kutuları için kenarlık */
+    border-radius: 8px; /* Yuvarlatılmış köşeler */
+    overflow: hidden; /* İçeriği sığdırmak */
+    background-color: #fff; /* Set background to white */
+    color: #000; /* Set text color to black */
+    padding: 10px;
+    text-align: left;
+}
+
+.movie img {
+    width: 100%; /* Resmi container'a sığdır */
+    height: auto; /* Oranları koru */
+    border-bottom: 1px solid #ddd; /* Resmin altına bir kenarlık ekle */
+}
+
+.container h1{
+    
+    color: #0a1375; /* Set the color to white */
+    text-align: center;
+    font-family: fantasy;
+    font-size: 50px;
+}
+
+.movie h2 {
+    font-size: 16px; /* Başlık boyutunu küçült */
+    margin: 10px 0; /* Başlık kenar boşluğu */
+    overflow: hidden; /* Metni sığdırmak */
+    text-overflow: ellipsis; /* Uzun başlıkları kısalt */
+    white-space: nowrap; /* Metni fazla uzunlukta kesmek için */
+
+}
+
+.movie p {
+    font-size: 14px; /* Paragraf boyutunu küçült */
+    margin: 5px 0; /* Paragraf kenar boşluğu */
+    overflow: hidden; /* Metni sığdırmak */
+    text-overflow: ellipsis; /* Uzun açıklamaları kısalt */
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Açıklamayı en fazla 3 satıra kısalt */
+    -webkit-box-orient: vertical;
+}
+
+.navbar {
+    background-color: #333; /* Change this to the desired color */
+    position: fixed; /* Fix the navbar at the top */
+    top: 0; /* Align it to the top */
+    width: 100%; /* Full width */
+    height: 80px; /* Set the height */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.container {
+    background-color: #000; /* Set the background to black */
+    padding-top: 100px; /* Add padding equal to the navbar height */
+    text-align: center; /* Center the content */
+}
+
+.navbar ul li a:hover {
+    background-color: rgba(249, 249, 249, 0.2); /* Üzerine gelindiğinde arka plan rengi */
+    border-radius: 4px; /* Kenar yumuşatma */
+}
+
+.container .navbar{
+    background: rgba(9, 47, 160, 0.4)
+}
