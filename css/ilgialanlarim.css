@@ -1,0 +1,12 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.track {
+    margin: 10px 0;
+}
+.track-title {
+    font-weight: bold;
+}
+.track-audio {
+    margin-top: 5px;
+}
